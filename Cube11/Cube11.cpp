@@ -35,7 +35,7 @@ void Cube11::CreateDevice() {
 	creationFlags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
 
-	D3D_FEATURE_LEVEL featureLevels[] =	{
+	D3D_FEATURE_LEVEL featureLevels[] = {
 		D3D_FEATURE_LEVEL_9_1
 	};
 
@@ -240,7 +240,7 @@ void Cube11::RenderFrame() {
 	// Send vertex data to the Input Assembler stage.
 	UINT stride = sizeof(VertexPositionColor);
 	UINT offset = 0;
-	m_d3dContext->IASetVertexBuffers(0,	1, m_vertexBuffer.GetAddressOf(), &stride, &offset);
+	m_d3dContext->IASetVertexBuffers(0, 1, m_vertexBuffer.GetAddressOf(), &stride, &offset);
 	m_d3dContext->IASetIndexBuffer(m_indexBuffer.Get(), DXGI_FORMAT_R16_UINT, 0);
 	m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 	m_d3dContext->IASetInputLayout(m_inputLayout.Get());
