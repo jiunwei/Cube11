@@ -45,4 +45,3 @@ public:
 	void CreateDeviceResources();
 	void RenderFrame();
 };
-
