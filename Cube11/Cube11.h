@@ -1,4 +1,5 @@
 #pragma once
+#pragma comment(lib, "d3d11.lib")
 
 #define UNICODE
 #define WIN32_LEAN_AND_MEAN
